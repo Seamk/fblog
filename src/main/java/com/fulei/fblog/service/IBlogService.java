@@ -13,4 +13,5 @@ public interface IBlogService {
 
    BlogDto lookUpBlog(String uuid);
 
+  void test(String name);
 }

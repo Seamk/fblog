@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * @author fulei
  * @Title: FblogApplication
  * @ProjectName fblog
- * @Description: TODO
+ * @Description: FblogApplication
  * @date 2019/11/14 17:16
  */
 @SpringBootApplication

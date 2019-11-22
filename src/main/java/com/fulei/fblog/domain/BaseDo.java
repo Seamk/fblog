@@ -8,7 +8,7 @@ import lombok.Data;
  * @author fulei
  * @Title: BaseDo
  * @ProjectName fblog
- * @Description: TODO
+ * @Description: BaseDo
  * @date 2019/11/14 17:00
  */
 @Data

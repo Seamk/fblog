@@ -31,4 +31,6 @@ public class BlogDo extends BaseDo{
 
   private String author;
 
+  private Integer status;
+
 }
