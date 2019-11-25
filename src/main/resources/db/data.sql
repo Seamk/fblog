@@ -1,0 +1,1 @@
+/*insert into blog(uuid,author)values('3','5');*/

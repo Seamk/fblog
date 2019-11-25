@@ -1,0 +1,1 @@
+create table if not exists blog (uuid varchar(20) not null, created_by bigint, created_time timestamp, updated_by bigint, updated_time timestamp, author varchar(255), status integer, title varchar(255), primary key (uuid));
