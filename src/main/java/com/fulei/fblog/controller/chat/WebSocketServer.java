@@ -11,15 +11,17 @@ import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 /**
  * @author fulei
  * @Title: WebSocketServer
  * @ProjectName fblog
- * @Description: WebSocketServer
+ * @Description: 提供给客户端连接websocket
  * @date 2019/12/3 10:07
  */
 @ServerEndpoint("/websocket/{sid}")
+@Component
 @Slf4j
 public class WebSocketServer {
 
@@ -56,8 +58,9 @@ public class WebSocketServer {
   }
 
   @OnError
-  public void error(){
-
+  public void error(Session session,Throwable error){
+    log.error("发生错误");
+    error.printStackTrace();
   }
 
   @SneakyThrows(IOException.class)

@@ -1,21 +1,30 @@
 package com.fulei.fblog.controller.chat;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author fulei
  * @Title: ChatController
  * @ProjectName fblog
- * @Description: TODO
+ * @Description: ChatController
  * @date 2019/12/3 11:18
  */
 @RestController
 public class ChatController {
 
-  @RequestMapping("/chat/{cid}")
+  /**
+   * 提供客户端发送消息
+   * @param cid
+   * @param message
+   */
+  @PostMapping("/send/{cid}")
+  @ResponseStatus(HttpStatus.OK)
   public void chat(@PathVariable String cid,String message){
+        //TODO 登录完成后，cid去除
         WebSocketServer.sendInfo(message,cid);
   }
 
