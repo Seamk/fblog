@@ -1,4 +1,4 @@
-package com.fulei.fblog.controller.chat;
+package com.fulei.fblog.server;
 
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;

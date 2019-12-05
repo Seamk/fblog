@@ -1,6 +1,9 @@
 package com.fulei.fblog.controller.chat;
 
+import com.fulei.fblog.server.WebSocketServer;
 import org.springframework.http.HttpStatus;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -26,6 +29,12 @@ public class ChatController {
   public void chat(@PathVariable String cid,String message){
         //TODO 登录完成后，cid去除
         WebSocketServer.sendInfo(message,cid);
+  }
+
+  @MessageMapping("/send")
+  @SendTo("/topic")
+  public void send(){
+
   }
 
 }

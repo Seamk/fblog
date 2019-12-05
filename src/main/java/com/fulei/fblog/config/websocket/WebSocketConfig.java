@@ -1,4 +1,4 @@
-package com.fulei.fblog.config;
+package com.fulei.fblog.config.websocket;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
